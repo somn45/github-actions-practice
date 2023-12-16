@@ -45,6 +45,7 @@ function App() {
         />
         <input type="submit" value="로그인" onClick={handleForm} />
       </form>
+      <h2>안녕하세요 github actions을 연습하는 페이지입니다.</h2>
     </div>
   );
 }
