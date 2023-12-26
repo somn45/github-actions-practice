@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: '20.x'
       - name: node.js version
-        run: nodejs -v
+        run: node -v
       - name: list
         run: ls -al
       - name: Install Dependencies
