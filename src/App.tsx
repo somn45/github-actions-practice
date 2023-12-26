@@ -3,20 +3,10 @@ import Cat from './Cat';
 import useInput, { Form } from './hooks/useInput';
 
 function App() {
-  const [form, setForm] = useState<Form | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loggedUser = localStorage.getItem('user');
-    if (loggedUser) {
-      const form: Form = JSON.parse(loggedUser);
-      setForm(form);
-      console.log(form);
-    }
-    setLoading(false);
-  }, [loading]);
-
-  const [input, setInput] = useInput(form ? form : { name: '', password: '' });
+  const [input, setInput] = useInput({
+    name: '',
+    password: '',
+  });
 
   const handleForm = (e: React.MouseEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -24,7 +14,6 @@ function App() {
     window.alert('로그인되었습니다.');
   };
 
-  if (loading) return <div>로딩 중...</div>;
   return (
     <div>
       <Cat />
