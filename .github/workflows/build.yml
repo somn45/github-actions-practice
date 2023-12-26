@@ -11,8 +11,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - name: check ubuntu package
-        run: dpkg -l
+      - name: node.js version
+        run: nodejs -v
       - name: list
         run: ls -al
       - name: Install Dependencies
