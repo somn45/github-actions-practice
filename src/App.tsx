@@ -34,7 +34,7 @@ function App() {
         />
         <input type="submit" value="로그인" onClick={handleForm} />
       </form>
-      <p>안녕하세요! github actions 실습 페이지입니다.</p>
+      <p>안녕하세요! github actions 실습 페이지입니다</p>
     </div>
   );
 }
